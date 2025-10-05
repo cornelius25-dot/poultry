@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sunshine Poultry Farm - Raising quality poultry for a healthier tomorrow. We specialize in high-quality chicken, eggs, and organic feed production.">
+  <title>Sunshine Poultry Farm | Sustainable Poultry Farming</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <style id="app-style">
+    :root {
+      --primary-green: #5c8d23;
+      --dark-green: #3a5d0f;
+      --light-green: #c2d6a7;
+      --brown: #8b4513;
+      --light-brown: #d7c0a1;
+      --cream: #f9f5ec;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      background-color: var(--cream);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-brand {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: var(--primary-green);
+    }
+    
+    .nav-link {
+      color: #333;
+      font-weight: 500;
+      margin: 0 10px;
+      transition: all 0.3s;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary-green);
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-green);
+      border-color: var(--primary-green);
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--dark-green);
+      border-color: var(--dark-green);
+    }
+    
+    .btn-outline-primary {
+      color: var(--primary-green);
+      border-color: var(--primary-green);
+    }
+    
+    .btn-outline-primary:hover {
+      background-color: var(--primary-green);
+      border-color: var(--primary-green);
+      color: white;
+    }
+    
+    .hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://cdn.pixabay.com/photo/2016/11/29/05/07/rooster-1867562_1280.jpg') no-repeat center center;
+      background-size: cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    
+    .hero-content {
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+    
+    .hero-content h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+    }
+    
+    .hero-content p {
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      margin-bottom: 30px;
+    }
+    
+    .section-title {
+      position: relative;
+      color: var(--primary-green);
+      margin-bottom: 40px;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 60px;
+      height: 3px;
+      background-color: var(--primary-green);
+    }
+    
+    .about-img {
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-box {
+      padding: 30px;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+      height: 100%;
+    }
+    
+    .feature-box:hover {
+      transform: translateY(-10px);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--primary-green);
+      margin-bottom: 20px;
+    }
+    
+    .product-card {
+      border-radius: 10px;
+      /*overflow: hidden;*/
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: 0.1s;
+      background-color: white;
+      height: 100%;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .product-img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+    
+    .gallery-item {
+      margin-bottom: 30px;
+     /* overflow: hidden;*/
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .gallery-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+    
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+    
+    .blog-card {
+      border-radius: 10px;
+     /* overflow: hidden;*/
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      /*transition: 0.3s;*/
+      background-color: white;
+      height: 100%;
+    }
+    
+   /* .blog-card:hover {
+      transform: translateY(-10px);
+    }*/
+    
+    .blog-img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+    
+    .blog-date {
+      color: var(--primary-green);
+      font-weight: 500;
+    }
+    
+    .contact-info {
+      /*transition: 0.1ss;*/
+      padding: 30px;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .contact-icon {
+      font-size: 1.5rem;
+      color: var(--primary-green);
+      margin-right: 10px;
+    }
+    
+    .form-control:focus {
+      box-shadow: none;
+      border-color: var(--primary-green);
+    }
+    
+    .map-container {
+      height: 400px;
+      border-radius: 10px;
+     /* overflow: hidden;*/
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    footer {
+      background-color: #333;
+      color: white;
+    }
+    
+    .footer-link {
+      color: var(--light-green);
+      transition: color 0.3s;
+    }
+    
+    .footer-link:hover {
+      color: white;
+      text-decoration: none;
+    }
+    
+    .social-icon {
+      font-size: 1.5rem;
+      color: white;
+      margin-right: 15px;
+      transition: color 0.3s;
+    }
+    
+    .social-icon:hover {
+      color: var(--light-green);
+    }
+    
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary-green);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 999;
+    }
+    
+    .scroll-top.show {
+      opacity: 1;
+    }
+    
+    .cart-badge {
+      position: relative;
+      top: -8px;
+      left: -5px;
+      padding: 3px 6px;
+      border-radius: 50%;
+      background-color: var(--primary-green);
+      color: white;
+      font-size: 10px;
+    }
+    
+    #cart-icon {
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero-content p {
+        font-size: 1.2rem;
+      }
+      
+      .section-title {
+        text-align: center;
+      }
+      
+      .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Sunshine Poultry Farm</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link" href="javascript:void(0)" id="cart-link">
+              <i class="fas fa-shopping-cart" id="cart-icon"></i>
+              <span class="cart-badge" id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 hero-content" data-aos="fade-up" data-aos-duration="1000">
+          <h1>Raising Quality Poultry for a Healthier Tomorrow</h1>
+          <p>Sustainable farming practices for premium poultry products</p>
+          <div>
+            <a href="#products" class="btn btn-primary btn-lg me-3">Our Products</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-5 my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+          <h2 class="section-title">About Our Farm</h2>
+          <p>Sunshine Poultry Farm was established in 2010 with a mission to provide the highest quality poultry products while maintaining sustainable and ethical farming practices.</p>
+          <p>We believe in raising our birds in a stress-free, natural environment, allowing them to roam freely and enjoy natural sunshine. This approach results in healthier birds and better-quality products for our customers.</p>
+          <h3 class="mt-4">Our Mission</h3>
+          <p>To produce the highest quality poultry products while promoting sustainable farming practices and animal welfare.</p>
+          <h3 class="mt-4">Our Vision</h3>
+          <p>To become the leading sustainable poultry farm in the region, known for our quality, integrity, and commitment to the environment.</p>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+          <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://images.pexels.com/photos/34155492/pexels-photo-34155492.jpeg" class="d-block w-100 about-img" alt="Farm Image">
+              </div>
+              <div class="carousel-item">
+                <img src="https://cdn.pixabay.com/photo/2017/07/20/15/21/chickens-2522623_1280.jpg" class="d-block w-100 about-img" alt="Team Image">
+              </div>
+              <div class="carousel-item">
+                <img src="https://cdn.pixabay.com/photo/2017/02/10/16/16/chicken-2055802_1280.jpg" class="d-block w-100 about-img" alt="Sustainability Image">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Features Section -->
+      <div class="row mt-5">
+        <div class="col-12 text-center mb-4">
+          <h2>Why Choose Us</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <div class="feature-box">
+            <i class="fas fa-leaf feature-icon"></i>
+            <h4>Sustainable Practices</h4>
+            <p>We implement eco-friendly farming methods to minimize environmental impact and promote sustainability.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="feature-box">
+            <i class="fas fa-heartbeat feature-icon"></i>
+            <h4>Animal Welfare</h4>
+            <p>Our birds are raised in spacious, clean environments with access to outdoor areas and natural sunlight.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <div class="feature-box">
+            <i class="fas fa-award feature-icon"></i>
+            <h4>Quality Assurance</h4>
+            <p>Every product undergoes strict quality checks to ensure the highest standards of freshness and nutrition.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-5 my-5" style="background-color: var(--light-green); background-image: url('https://cdn.pixabay.com/photo/2018/02/08/22/27/background-3140185_1280.jpg'); background-blend-mode: overlay;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="section-title mx-auto" style="display: inline-block;">Our Products & Services</h2>
+          <p>We offer a variety of high-quality poultry products sourced directly from our farm</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4"">
+          <div class="product-card">
+            <img src="https://cdn.pixabay.com/photo/2018/02/26/16/30/eggs-3183410_1280.jpg" alt="Fresh Eggs" class="product-img">
+            <div class="p-4">
+              <h4>Fresh Eggs</h4>
+              <p>Farm-fresh eggs from free-range hens, rich in nutrients and flavor.</p>
+              <div class="d-flex justify-content-between align-items-center">
+            
+                <button class="btn btn-sm btn-primary add-to-cart" data-product="Fresh Eggs" data-price="5.99">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="product-card">
+            <img src="https://cdn.pixabay.com/photo/2016/11/18/17/42/barbecue-1836053_1280.jpg" alt="Broilers" class="product-img">
+            <div class="p-4">
+              <h4>Broilers</h4>
+              <p>Tender, juicy broiler chickens raised with care for superior taste.</p>
+              <div class="d-flex justify-content-between align-items-center">
+          
+                <button class="btn btn-sm btn-primary add-to-cart" data-product="Broilers" data-price="12.99">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="product-card">
+            <img src="https://images.pexels.com/photos/6294433/pexels-photo-6294433.jpeg" alt="Layers" class="product-img">
+            <div class="p-4">
+              <h4>Layers</h4>
+              <p>Healthy laying hens that are perfect for small farms and backyard coops.</p>
+              <div class="d-flex justify-content-between align-items-center">
+            
+                <button class="btn btn-sm btn-primary add-to-cart" data-product="Layers" data-price="18.99">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="product-card">
+            <img src="https://cdn.pixabay.com/photo/2016/11/29/05/25/animal-1867521_1280.jpg" alt="Chicks" class="product-img">
+            <div class="p-4">
+              <h4>Day-Old Chicks</h4>
+              <p>Healthy day-old chicks of various breeds available for your poultry needs.</p>
+              <div class="d-flex justify-content-between align-items-center">
+            
+                <button class="btn btn-sm btn-primary add-to-cart" data-product="Day-Old Chicks" data-price="3.50">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4"">
+          <div class="product-card">
+            <img src="https://images.pexels.com/photos/4530413/pexels-photo-4530413.jpeg" alt="Organic Feed" class="product-img">
+            <div class="p-4">
+              <h4>Organic Feed</h4>
+              <p>Premium organic poultry feed made from high-quality grains and supplements.</p>
+              <div class="d-flex justify-content-between align-items-center">
+            
+                <button class="btn btn-sm btn-primary add-to-cart" data-product="Organic Feed" data-price="24.99">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="product-card">
+            <img src="https://images.pexels.com/photos/34103826/pexels-photo-34103826.jpeg" alt="Consulting" class="product-img">
+            <div class="p-4">
+              <h4>Poultry Consulting</h4>
+              <p>Expert advice and consultation services for poultry farming businesses.</p>
+              <div class="d-flex justify-content-between align-items-center">
+              
+                <button class="btn btn-sm btn-primary add-to-cart" data-product="Poultry Consulting" data-price="75.00">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-5 my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="section-title mx-auto" style="display: inline-block;">Farm Gallery</h2>
+          <p>Take a visual journey through our farm operations and daily activities</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 gallery-item">
+          <img src="https://cdn.pixabay.com/photo/2016/07/31/17/51/chicken-1559548_1280.jpg" alt="Farm Gallery" class="gallery-img">
+        </div>
+        <div class="col-md-4 gallery-item">
+          <img src="https://images.pexels.com/photos/4911783/pexels-photo-4911783.jpeg" alt="Farm Gallery" class="gallery-img">
+        </div>
+        <div class="col-md-4 gallery-item">
+          <img src="https://cdn.pixabay.com/photo/2013/11/01/11/13/hen-203850_1280.jpg" alt="Farm Gallery" class="gallery-img">
+        </div>
+        <div class="col-md-6 gallery-item">
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6 gallery-item">
+          <img src="https://images.pexels.com/photos/2134246/pexels-photo-2134246.jpeg" alt="Farm Gallery" class="gallery-img">
+        </div>
+        <div class="col-md-4 gallery-item" >
+          <img src="https://cdn.pixabay.com/photo/2017/04/20/07/07/eggs-2244687_1280.jpg" alt="Farm Gallery" class="gallery-img">
+        </div>
+        <div class="col-md-4 gallery-item">
+          <img src="https://cdn.pixabay.com/photo/2016/11/18/14/17/rooster-1834736_1280.jpg" alt="Farm Gallery" class="gallery-img">
+        </div>
+        <div class="col-md-4 gallery-item" >
+          <img src="https://cdn.pixabay.com/photo/2013/11/01/11/13/hen-203851_1280.jpg" alt="Farm Gallery" class="gallery-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="py-5 my-5" style="background-color: var(--cream);">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="section-title mx-auto" style="display: inline-block;">Blog & News</h2>
+          <p>Stay updated with our latest news, tips, and insights about poultry farming</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="blog-card">
+            <img src="https://cdn.pixabay.com/photo/2014/07/01/12/37/derbyshire-381822_1280.jpg" alt="Blog Image" class="blog-img">
+            <div class="p-4">
+              <span class="blog-date">June 15, 2023</span>
+              <h4 class="mt-2">5 Tips for Raising Healthy Chickens</h4>
+              <p>Learn the essential practices for maintaining healthy chickens in your backyard or farm.</p>
+              <a href="javascript:void(0)" class="btn btn-sm btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="blog-card">
+            <img src="https://cdn.pixabay.com/photo/2020/03/29/09/50/no-gmo-4980645_1280.jpg" alt="Blog Image" class="blog-img">
+            <div class="p-4">
+              <span class="blog-date">May 28, 2023</span>
+              <h4 class="mt-2">Benefits of Organic Feed for Poultry</h4>
+              <p>Discover why organic feed is better for your poultry and how it impacts egg and meat quality.</p>
+              <a href="javascript:void(0)" class="btn btn-sm btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="blog-card">
+            <img src="https://cdn.pixabay.com/photo/2017/09/09/17/42/chicken-2732878_1280.jpg" alt="Blog Image" class="blog-img">
+            <div class="p-4">
+              <span class="blog-date">April 10, 2023</span>
+              <h4 class="mt-2">Common Poultry Diseases and Prevention</h4>
+              <p>Learn about common diseases that affect poultry and how to prevent them effectively.</p>
+              <a href="javascript:void(0)" class="btn btn-sm btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12 text-center">
+          <nav aria-label="Blog pagination">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="javascript:void(0)" tabindex="-1" aria-disabled="true">Previous</a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="section-title mx-auto" style="display: inline-block;">Contact Us</h2>
+          <p>Get in touch with us for inquiries, orders, or to schedule a farm visit</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.2142456087934!2d-74.00597678459491!3d40.7127837979332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1623252236142!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-info mb-4">
+            <h3>Contact Information</h3>
+            <p><i class="fas fa-map-marker-alt contact-icon"></i> 123 Farm Road, Countryside, State 12345</p>
+            <p><i class="fas fa-phone contact-icon"></i> (555) 123-4567</p>
+            <p><i class="fas fa-envelope contact-icon"></i> info@sunshinepoultry.com</p>
+            <div class="mt-3">
+              <a href="javascript:void(0)" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="javascript:void(0)" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="javascript:void(0)" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="javascript:void(0)" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <form id="contactForm" class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                <div class="invalid-feedback">
+                  Please enter your name.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+              <div class="invalid-feedback">
+                Please enter a subject.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+              <div class="invalid-feedback">
+                Please enter your message.
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-6 mx-auto" data-aos="fade-up" data-aos-duration="1000">
+          <div class="card p-4">
+            <h3 class="text-center mb-4">Subscribe to Our Newsletter</h3>
+            <form id="newsletterForm" class="needs-validation" novalidate>
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Your Email Address" required>
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+              <div class="form-text text-center">
+                Get the latest news, tips, and promotions delivered directly to your inbox.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>Sunshine Poultry Farm</h5>
+          <p>Raising quality poultry for a healthier tomorrow. Sustainable, ethical, and eco-friendly farming practices.</p>
+          <div>
+            <a href="javascript:void(0)" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="javascript:void(0)" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="javascript:void(0)" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="javascript:void(0)" class="social-icon"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Us</a></li>
+            <li><a href="#products" class="footer-link">Products & Services</a></li>
+            <li><a href="#gallery" class="footer-link">Gallery</a></li>
+            <li><a href="#blog" class="footer-link">Blog & News</a></li>
+            <li><a href="#contact" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <h5>Contact Information</h5>
+          <p><i class="fas fa-map-marker-alt me-2"></i> 123 Farm Road, Countryside, State 12345</p>
+          <p><i class="fas fa-phone me-2"></i> (555) 123-4567</p>
+          <p><i class="fas fa-envelope me-2"></i> info@sunshinepoultry.com</p>
+          <p><i class="fas fa-clock me-2"></i> Mon-Fri: 8am-5pm, Sat: 9am-2pm</p>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12 text-center">
+          <hr>
+          <p class="mb-0">&copy; 2025 Sunshine Poultry Farm. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <div class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Shopping Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Your Shopping Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="cartItems">
+            <p class="text-center" id="emptyCartMessage">Your cart is empty.</p>
+            <div id="cartItemsList"></div>
+          </div>
+          <div class="d-flex justify-content-between mt-3">
+            <h5>Total:</h5>
+            <h5 id="cartTotal">$0.00</h5>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="checkoutBtn">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script id="app-script">
+    // Initialize AOS
+    AOS.init();
+    
+    // Cart functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set up a global cart state
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      updateCartBadge();
+      
+      // Add to cart buttons
+      const addToCartButtons = document.querySelectorAll('.add-to-cart');
+      addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const product = this.getAttribute('data-product');
+          const price = parseFloat(this.getAttribute('data-price'));
+          
+          cart.push({
+            product: product,
+            price: price,
+            quantity: 1
+          });
+          
+          saveCart();
+          showAddedToCartToast(product);
+        });
+      });
+      
+      // Cart icon click
+      document.getElementById('cart-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Populate cart modal
+        const cartItemsList = document.getElementById('cartItemsList');
+        const emptyCartMessage = document.getElementById('emptyCartMessage');
+        const cartTotal = document.getElementById('cartTotal');
+        
+        if (cart.length === 0) {
+          emptyCartMessage.style.display = 'block';
+          cartItemsList.innerHTML = '';
+          cartTotal.textContent = '$0.00';
+        } else {
+          emptyCartMessage.style.display = 'none';
+          
+          let total = 0;
+          let html = '';
+          
+          cart.forEach((item, index) => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            
+            html += `
+              <div class="d-flex justify-content-between align-items-center mb-2 p-2 border-bottom">
+                <div>
+                  <h6 class="mb-0">${item.product}</h6>
+                  <small class="text-muted">$${item.price.toFixed(2)} x ${item.quantity}</small>
+                </div>
+                <div class="d-flex align-items-center">
+                  <span class="me-3">$${itemTotal.toFixed(2)}</span>
+                  <button class="btn btn-sm btn-danger remove-cart-item" data-index="${index}">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            `;
+          });
+          
+          cartItemsList.innerHTML = html;
+          cartTotal.textContent = '$' + total.toFixed(2);
+          
+          // Add event listeners to remove buttons
+          document.querySelectorAll('.remove-cart-item').forEach(button => {
+            button.addEventListener('click', function() {
+              const index = parseInt(this.getAttribute('data-index'));
+              cart.splice(index, 1);
+              saveCart();
+              
+              // Refresh the modal content
+              document.getElementById('cart-link').click();
+            });
+          });
+        }
+        
+        // Show the modal
+        const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+        cartModal.show();
+      });
+      
+      // Checkout button
+      document.getElementById('checkoutBtn').addEventListener('click', function() {
+        alert('This is a prototype. In the full version, you would proceed to checkout.');
+      });
+      
+      // Contact form validation
+      const contactForm = document.getElementById('contactForm');
+      const newsletterForm = document.getElementById('newsletterForm');
+      
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        if (!contactForm.checkValidity()) {
+          event.stopPropagation();
+          contactForm.classList.add('was-validated');
+        } else {
+          alert('Thanks for your message! This is a prototype. In the full version, your message would be sent.');
+          contactForm.reset();
+          contactForm.classList.remove('was-validated');
+        }
+      });
+      
+      newsletterForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        if (!newsletterForm.checkValidity()) {
+          event.stopPropagation();
+          newsletterForm.classList.add('was-validated');
+        } else {
+          alert('Thanks for subscribing! This is a prototype. In the full version, you would receive our newsletter.');
+          newsletterForm.reset();
+          newsletterForm.classList.remove('was-validated');
+        }
+      });
+      
+      // Scroll to top button
+      const scrollTopBtn = document.getElementById('scrollTop');
+      
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.classList.add('show');
+        } else {
+          scrollTopBtn.classList.remove('show');
+        }
+      });
+      
+      scrollTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            const targetElement = document.querySelector(href);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 70,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+      
+      // Update active nav item on scroll
+      window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section');
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.clientHeight;
+          
+          if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+      
+      // Helper functions
+      function updateCartBadge() {
+        const cartCount = document.getElementById('cart-count');
+        cartCount.textContent = cart.length;
+      }
+      
+      function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartBadge();
+      }
+      
+      function showAddedToCartToast(product) {
+        alert(`${product} added to cart!`);
+      }
+    });
+  </script>
+</body>
+</html>
